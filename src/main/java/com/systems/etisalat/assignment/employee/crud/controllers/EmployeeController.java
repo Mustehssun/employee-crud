@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/employees")
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 public class EmployeeController {
     @Autowired
     private EmployeeService service;
