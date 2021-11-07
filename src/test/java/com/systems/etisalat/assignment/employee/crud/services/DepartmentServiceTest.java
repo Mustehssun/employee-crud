@@ -2,13 +2,13 @@ package com.systems.etisalat.assignment.employee.crud.services;
 
 import com.systems.etisalat.assignment.employee.crud.entities.Department;
 import com.systems.etisalat.assignment.employee.crud.repositories.DepartmentRepository;
+import com.systems.etisalat.assignment.employee.crud.services.impls.DepartmentServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @SpringBootTest
 public class DepartmentServiceTest {
     @Autowired
-    private DepartmentService service;
+    private DepartmentServiceImpl service;
 
     @Autowired
     private DepartmentRepository repository;

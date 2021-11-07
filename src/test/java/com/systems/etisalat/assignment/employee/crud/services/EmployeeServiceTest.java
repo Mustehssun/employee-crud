@@ -2,6 +2,7 @@ package com.systems.etisalat.assignment.employee.crud.services;
 
 import com.systems.etisalat.assignment.employee.crud.entities.Employee;
 import com.systems.etisalat.assignment.employee.crud.repositories.EmployeeRepository;
+import com.systems.etisalat.assignment.employee.crud.services.impls.EmployeeServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @SpringBootTest
 public class EmployeeServiceTest {
     @Autowired
-    private EmployeeService service;
+    private EmployeeServiceImpl service;
 
     @Autowired
     private EmployeeRepository repository;

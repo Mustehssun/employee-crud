@@ -2,6 +2,7 @@ package com.systems.etisalat.assignment.employee.crud.controllers;
 
 import com.systems.etisalat.assignment.employee.crud.entities.Employee;
 import com.systems.etisalat.assignment.employee.crud.services.EmployeeService;
+import com.systems.etisalat.assignment.employee.crud.services.impls.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class EmployeeController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<List<Employee>> getEmployees(@RequestParam(defaultValue = "0") int offset, @RequestParam(defaultValue = "5") int limit) {
-        return ResponseEntity.ok(service.getEmployees(PageRequest.of(offset, limit)));
+        return ResponseEntity.ok(service.getEmployees(PageRequest.of(offset-1, limit)));
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
